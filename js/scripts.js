@@ -1,6 +1,8 @@
-(function($) {
-  'use strict';
 
-    $("body.home").find("#searchBar input").focus();
+const searcher = () => {
+  $("body.home").find("#searchBar input").focus();
+};
 
-})(jQuery);
+$(document).ready(() => {
+  searcher();
+});
