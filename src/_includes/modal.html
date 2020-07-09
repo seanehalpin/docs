@@ -1,0 +1,38 @@
+<div class="th-modal modal fade" id="contactModal" tabindex="-1" role="dialog" aria-labelledby="contactModal">
+  <div class="th-modal-dialog modal-dialog" role="document">
+    <div class="th-modal-content modal-content">
+      <div class="c-card__block">
+        <div class="o-flexy">
+          <div class="o-flexy__item">
+            <h3 class="u-mrg-0">How can we help?</h3>
+          </div>
+          <div class="o-flexy__item">
+            <a href="#" data-dismiss="modal" aria-label="Close"><i class="icon icon-close"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="c-card__block">
+        <form action="" class="th-modal-form" data-parsley-validate>
+          <div class="th-control-group">
+            <input class="th-form-input c-input c-input--lg" placeholder="Name" value="" type="text" data-parsley-required="false">
+          </div>
+          <div class="th-control-group">
+            <input class="th-form-input c-input c-input--lg" placeholder="Email *" value="" type="email" required data-parsley-error-message="Please enter a valid email address" required data-parsley-type="email">
+          </div>
+          <div class="th-control-group">
+            <input class="th-form-input c-input c-input--lg" placeholder="Subject *" value="" required data-parsley-error-message="Please enter a subject line" type="text">
+          </div>
+          <div class="th-control-group">
+            <textarea class="th-textarea" placeholder="Your Message *" required data-parsley-error-message="Please add your message" required></textarea>
+          </div>
+          <div class="th-control-group">
+            <label for="upload" class="control-label">Upload file:</label> <input type="file" class="th-file" name="upload" data-parsley-required="false">
+          </div>
+          <div class="th-control-group">
+            <input type="submit" class="th-form-button c-button c-button--primary" value="Send">
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

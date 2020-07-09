@@ -1,0 +1,55 @@
+// ------------------------------------------------------
+// Print Styles
+// ------------------------------------------------------
+
+@media print {
+
+  .th-footer, .th-article-footer, .th-header, .th-breadcrumbs, .icon-print,
+  .c-alert, .th-related-title, .th-article-list-related {
+    display: none;
+  }
+
+  a {
+    color: #000 !important;
+  }
+
+  a:after {
+    content:" (" attr(href) ") ";
+  }
+
+  h1, h2, h3, h4, h5, p {
+    color: #000 !important;
+  }
+
+  body {
+    background: _color(white);
+  }
+
+  .th-article-list.th-article figcaption {
+    padding: 10px 0;
+  }
+
+  .th-article-list, .th-article-list.th-article figure {
+    border: 0;
+    box-shadow: none;
+
+    img {
+      border: 1px solid grey;
+    }
+  }
+
+  .o-col-12, .o-container {
+    width: 100% !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    max-width: 100% !important;
+  }
+
+  .th-article-list.th-article {
+
+    * + * {
+      margin: 1em 0;
+    }
+  }
+
+}

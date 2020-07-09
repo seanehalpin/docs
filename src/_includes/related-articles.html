@@ -1,0 +1,27 @@
+<div class="th-section">
+  <div class="o-container">
+    <div class="o-row">
+      <div class="o-col-12 o-col-10@sm o-col-offset-1@sm">
+        <div class="o-row">
+          <div class="o-col-12">
+            <h3 class="th-related-title">Related Articles</h3>
+          </div>
+        </div>
+        <div class="o-row">
+          <div class="o-col-12">
+            <ul class="th-article-list th-article-list-single th-article-list-related">
+              {% for post in site.data.posts limit: 4 %}
+                <li class="th-article-list-item th-article-list-item-related">
+                  <a href="/article" class="th-article-list-link">
+                    <i class="icon icon-doc"></i>
+                    <span>{{ post.title | replace: "|company.name|", site.company.name }}</span>
+                  </a>
+                </li>
+              {% endfor %}
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

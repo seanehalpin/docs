@@ -1,0 +1,41 @@
+---
+layout: default
+title: Getting Started
+sub-title: Managing your account, creating new Users, pricing details, exporting data
+search-sub: true
+search-btn: Search
+search-placeholder: Search our knowledge base
+company: Help Scout
+breadcrumbs: true
+logo: logo.svg
+---
+
+<main>
+
+  <section>
+    <div class="o-container">
+      <div class="o-row">
+        <div class="o-col-12 o-col-10@sm o-col-offset-1@sm">
+          <h1 class="th-h1">{{ page.title }}</h1>
+          {% if page.sub-title != null %}
+          <p class="th-description">{{ page.sub-title }}</p>
+          {% endif %}
+        </div>
+      </div>
+      <div class="o-row">
+        <div class="o-col-12 o-col-10@sm o-col-offset-1@sm">
+          <ul class="th-article-list">
+            {% for post in site.data.posts %}
+            <li class="th-article-list-item">
+              <a href="/article" class="th-article-list-link">
+                <span>{{ post.title | replace: "|company.name|", site.company.name }}</span>
+              </a>
+            </li>
+            {% endfor %}
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>

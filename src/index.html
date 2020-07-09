@@ -1,0 +1,67 @@
+---
+layout: default
+company: Trello
+search-btn: Search
+search-placeholder: Search our knowledge base
+search: true
+slug: home
+title: What can we help you with today?
+alert: false
+popular: false
+single: true
+collections-title: Getting Started
+sub-title: Managing your account, creating new Users, pricing details, exporting data
+---
+
+{% if page.alert ==  true %}
+<div class="th-section u-mrg-t-4 u-mrg-b-8">
+  <div class="o-container">
+    <div class="o-row">
+      <div class="o-col-12 o-col-10@sm o-col-offset-1@sm">
+        <div class="th-alert c-alert is-info">
+          Looking for help getting started? Check out our <a href="#">Getting Started Guide</a>.
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endif %}
+
+<main>
+
+  {% if page.popular ==  true %}
+  {% include popular.html %}
+  {% endif %}
+
+  {% if page.single ==  true %}
+  {% include single.html %}
+  {% else %}
+  <div class="th-section">
+    <div class="o-container">
+      <div class="o-row">
+        <div class="o-col-12 o-col-10@sm o-col-offset-1@sm">
+          <div class="o-row">
+
+            {% for category in site.data.categories %}
+              <div class="o-col-12 o-col-6@md">
+                <a class="th-mega-link" href="/category">
+                  <h3 class="th-mega-link-title">
+                    {{ category.title | replace: "|company.name|", site.company.name }}
+                  </h3>
+                  <p class="th-mega-link-p">{{ category.description }}</p>
+                  <p class="th-article-count">
+                    <span class="th-article-count-span">
+                      <span class="notranslate">{{ category.count }}</span> articles</span>
+                    </span>
+                  </p>
+                </a>
+              </div>
+            {% endfor %}
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  {% endif %}
+</main>
