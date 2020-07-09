@@ -51,5 +51,7 @@ admin: false
       </div>
     </div>
   </div>
-
+  {% if page.related-articles == true %}
+  {% include related-articles.html %}
+  {% endif %}
 </main>
