@@ -44,7 +44,7 @@ sub-title: Managing your account, creating new Users, pricing details, exporting
 
             {% for category in site.data.categories %}
               <div class="o-col-12 o-col-6@md">
-                <a class="th-mega-link" href="/category">
+                <a class="th-mega-link" href="{{ site.baseurl }}/category">
                   <h3 class="th-mega-link-title">
                     {{ category.title | replace: "|company.name|", site.company.name }}
                   </h3>
