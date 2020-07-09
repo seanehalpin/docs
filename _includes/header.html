@@ -29,7 +29,7 @@
       <div class="o-row">
         <div class="o-col-12 o-col-10@sm o-col-offset-1@sm">
           {% if page.title !=null %}<h1 class="th-search-title">{{ page.title }}</h1>{% endif %}
-          <form action="/results" method="GET" id="searchBar" class="th-docs-search-form" autocomplete="off">
+          <form action="{{ site.baseurl }}/results" method="GET" id="searchBar" class="th-docs-search-form" autocomplete="off">
             <div class="o-control-group th-search-holder" role="group">
               <input class="c-input o-control-group__block th-search-input" type="text" placeholder="{{ page.search-placeholder }}" />
               <button class="c-button th-search-btn"><span>{{ page.search-btn }}</span> <i class="icon icon-search"></i></button>
