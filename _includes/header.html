@@ -3,7 +3,7 @@
     <div class="o-container">
       <div class="o-row">
         <div class="o-col-4 o-col-offset-1@sm">
-          <a id="nav-logo" href="/" class="th-nav-logo">
+          <a id="nav-logo" href="{{ site.baseurl }}/" class="th-nav-logo">
             {% if layout.logo != null %}
             <img src="{{ site.baseurl }}/images/{{ layout.logo }}" alt="{{ layout.company }}" />
             {% endif %}
@@ -44,9 +44,8 @@
   <div id="docsSearch" class="th-docs-search">
     <div class="o-container">
       <div class="o-row">
-
         <div class="o-col-12 o-col-10@sm o-col-offset-1@sm">
-          <form action="/results" method="GET" id="searchBar" class="th-docs-search-form th-docs-search-form-sub" autocomplete="off">
+          <form action="{{ site.baseurl }}/results" method="GET" id="searchBar" class="th-docs-search-form th-docs-search-form-sub" autocomplete="off">
             <div class="o-control-group th-search-holder" role="group">
               <input class="c-input o-control-group__block th-search-input" type="text" placeholder="{{ page.search-placeholder }}" />
               <button class="c-button th-search-btn"><span>{{ page.search-btn }}</span> <i class="icon icon-search"></i></button>
