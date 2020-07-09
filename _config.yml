@@ -6,12 +6,12 @@
 # 'jekyll serve'. If you change this file, please restart the server process.
 
 # Site settings
-title: Portfolio
+title: Docs
 email: sean.e.halpin@gmail.com
 description: > # this means to ignore newlines until "baseurl:"
   Portfolio
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://seanehalpin.github.io/sean-2020" # the base hostname & protocol for your site
+url: "https://seanehalpin.github.io/docs" # the base hostname & protocol for your site
 twitter_username: seanehalpin
 github_username:  seanehalpin
 info-button: Info
