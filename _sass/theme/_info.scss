@@ -1,0 +1,37 @@
+// theme :: info
+
+.c-history {
+
+  &__item {
+    height: 100%;
+  }
+
+  &__year {
+    padding: 0 2.5em 0 4em;
+  }
+
+  &__time {
+    display: block;
+    text-align: right;
+    color: _color(blue, 300);
+    font-size: 20px;
+    line-height: 1.7;
+  }
+
+  &__title, &__company {
+    font-family: $font-primary;
+    margin: 0;
+  }
+
+  &__title {
+    color: _color(white);
+    font-size: 24px;
+    margin-bottom: 0.3em;
+  }
+
+  &__company {
+    color: _color(blue, 300);
+    font-size: 20px;
+    font-weight: 400;
+  }
+}

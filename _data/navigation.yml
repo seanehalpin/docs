@@ -1,0 +1,15 @@
+-
+  text: "Work"
+  css: "c-nav-list__item--work"
+  btn: ""
+  url: "/"
+-
+  text: "Info"
+  css: "c-nav-list__item--info"
+  btn: ""
+  url: "/info"
+-
+  text: "Contact"
+  css: "c-nav-list__item--contact js-beacon"
+  btn: ""
+  url: "#"

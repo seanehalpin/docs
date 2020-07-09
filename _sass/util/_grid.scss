@@ -1,0 +1,348 @@
+// utils :: grid
+
+
+// NOTE
+// make edits at 1180px
+
+
+.o-grid {
+
+  display: grid;
+  grid-gap: 0;
+  grid-template-columns: repeat(5,$grid-size-mobile);
+  margin: auto;
+  max-width: $grid-width;
+  width: 100%;
+
+  @include breakpoint($bp-reg) {
+    grid-template-columns: repeat($grid-cols,$grid-size-lg);
+  }
+
+  @include breakpoint($bp-large) {
+    grid-template-columns: repeat($grid-cols,$grid-size);
+  }
+
+  &__split {
+    clear: both;
+    grid-column-gap: 140px;
+    grid-row-gap: 120px;
+    grid-template-columns: repeat(auto-fill,minmax(calc((100% - 140px)/ 2),1fr));
+  }
+
+  &__eye {
+    background: white;
+    @include breakpoint($bp-sm) {
+      display: block;
+      background: none;
+    }
+  }
+
+
+  &__inner {
+
+    @include breakpoint($bp-sm) {
+      display: grid;
+      grid-gap: 0;
+      grid-template-columns: repeat(4,$grid-size-lg);
+    }
+
+    @include breakpoint($bp-large) {
+      grid-template-columns: repeat(4,$grid-size);
+    }
+
+    &--large {
+      grid-template-columns: repeat(5,$grid-size-lg);
+
+      @include breakpoint($bp-xl) {
+        grid-template-columns: repeat(5,$grid-size);
+      }
+    }
+  }
+
+  &__block {
+    box-sizing: border-box;
+    position: relative;
+    z-index: 5;
+
+    &--s1-v1 {
+      grid-column: span 1 / span 1;
+      grid-row: span 1 / span 1;
+
+      height: $grid-size-sm;
+      max-height: $grid-size-sm;
+      min-height: $grid-size-sm;
+      width: $grid-size-sm;
+
+      // transition: all 0.8s $easing-cubic;
+      transition: all 0.1s $easing-basic;
+
+      @include breakpoint($bp-sm) {
+        height: $grid-size-md;
+        max-height: $grid-size-md;
+        max-width: $grid-size-md;
+        min-height: $grid-size-md;
+        width: $grid-size-md;
+      }
+
+      @include breakpoint($bp-md) {
+        height: $grid-size-lg;
+        max-height: $grid-size-lg;
+        max-width: $grid-size-lg;
+        min-height: $grid-size-lg;
+        width: $grid-size-lg;
+      }
+
+      @include breakpoint($bp-large) {
+        height: $grid-size;
+        max-height: $grid-size;
+        max-width: $grid-size;
+        min-height: $grid-size;
+        width: $grid-size;
+      }
+
+    }
+
+    &--mb-hide {
+      display: none;
+
+      @include breakpoint($bp-reg) {
+        display: block;
+      }
+    }
+
+    &--s4-v1 {
+      grid-column: span 4 / span 1;
+      grid-row: span 1 / span 1;
+      width: auto;
+      height: auto;
+    }
+
+    &--s6-v1 {
+      grid-column: span 6 / span 1;
+      grid-row: span 1 / span 1;
+      width: auto;
+      height: auto;
+    }
+
+    &--s3-v1 {
+      grid-column: span 3 / span 1;
+      grid-row: span 1 / span 1;
+      width: auto;
+      height: auto;
+    }
+
+    &--s3-v3 {
+      grid-column: span 5 / span 5;
+      grid-row: span 5 / span 5;
+      width: auto;
+      height: auto;
+
+      @include breakpoint($bp-sm) {
+        grid-column: span 3 / span 3;
+        grid-row: span 3 / span 3;
+        width: auto;
+        height: auto;
+      }
+    }
+
+    &--s5-v3 {
+      grid-column: span 5 / span 5;
+      grid-row: span 5 / span 5;
+      width: auto;
+      height: auto;
+
+      @include breakpoint($bp-sm) {
+        grid-column: span 5 / span 3;
+        grid-row: span 3 / span 3;
+        width: auto;
+        height: auto;
+      }
+    }
+
+    &--s3-v2 {
+      grid-column: span 5 / span 5;
+      grid-row: span 2 / span 2;
+      width: auto;
+      height: auto;
+
+      @include breakpoint($bp-reg) {
+        grid-column: span 3 / span 2;
+        grid-row: span 2 / span 2;
+      }
+    }
+
+    &--hp-header-l {
+      grid-column: span 3 / span 3;
+      grid-row: span 3 / span 3;
+      width: auto;
+      height: auto;
+
+      @include breakpoint($bp-reg) {
+        grid-column: span 3 / span 2;
+        grid-row: span 2 / span 2;
+      }
+    }
+
+    &--hp-header-r {
+      grid-column: span 5 / span 5;
+      grid-row: span 3 / span 3;
+      width: 100%;
+      height: 500px;
+
+      @include breakpoint($bp-sm) {
+        grid-column: span 2 / span 2;
+        grid-row: span 3 / span 3;
+        width: auto;
+        height: auto;
+      }
+
+      @include breakpoint($bp-reg) {
+        grid-column: span 3 / span 3;
+        grid-row: span 3 / span 3;
+      }
+    }
+
+    &--s3-v7 {
+
+      grid-column: span 5 / span 5;
+      grid-row: span 4 / span 3;
+      width: auto;
+      height: auto;
+
+      @include breakpoint($bp-reg) {
+        grid-column: span 3 / span 7;
+        grid-row: span 7 / span 3;
+      }
+
+    }
+
+    &--s4-v2 {
+      grid-column: span 4 / span 2;
+      grid-row: span 2 / span 4;
+      width: auto;
+      height: auto;
+    }
+
+    &--s4-v3 {
+      grid-column: span 5 / span 5;
+      grid-row: span 3 / span 3;
+      width: auto;
+      height: auto;
+
+      @include breakpoint($bp-reg) {
+        grid-column: span 4 / span 3;
+        grid-row: span 3 / span 4;
+      }
+    }
+
+    &--s3-v5 {
+      grid-column: span 5 / span 5;
+      grid-row: span 5 / span 3;
+      width: auto;
+      height: auto;
+
+      @include breakpoint($bp-reg) {
+        grid-column: span 3 / span 5;
+        grid-row: span 5 / span 3;
+       }
+    }
+
+    &--s7-v3 {
+      grid-column: span 5 / span 3;
+      grid-row: span 3 / span 3;
+      width: auto;
+      height: auto;
+
+      @include breakpoint($bp-reg) {
+        grid-column: span 7 / span 3;
+        grid-row: span 7 / span 3;
+      }
+    }
+
+    &--s9-v1 {
+      grid-column: 1/-2;
+      grid-row: span 1 / span 1;
+      height: $grid-size;
+    }
+
+    &--full {
+      grid-column: 1/-1;
+      grid-row: span 1 / span 1;
+      height: $grid-size;
+    }
+
+    &--show-sm {
+      @include breakpoint($bp-sm) {
+        display: block !important;
+       }
+    }
+
+    &--show-reg {
+      @include breakpoint($bp-reg) {
+        display: block !important;
+       }
+    }
+
+    &--show-xl {
+      @include breakpoint($bp-xl) {
+        display: block !important;
+       }
+    }
+
+    // fancy after
+
+    &--work-hero {
+      position: inherit;
+      z-index: 1;
+      &:after {
+        content: "";
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background: _color(blue, 400);
+        display: block;
+        z-index: 1;
+      }
+    }
+
+  }
+
+  &--figure {
+    padding: 0 2em;
+
+    @include breakpoint($bp-reg) {
+      padding: 0;
+    }
+  }
+
+  // colors
+
+  &--yellow-400 {
+    background: _color(yellow, 400);
+  }
+  &--yellow-500 {
+    background: _color(yellow, 500);
+  }
+  &--turquoise-400 {
+    background: _color(turquoise, 400);
+  }
+  &--turquoise-500 {
+    background: _color(turquoise, 500);
+  }
+  &--pink-400 {
+    background: _color(pink, 400);
+  }
+  &--pink-500 {
+    background: _color(pink, 500);
+  }
+  &--blue-400 {
+    background: _color(blue, 400);
+  }
+  &--blue-200 {
+    background: _color(blue, 200);
+  }
+  &--blue-500 {
+    background: _color(blue, 500);
+  }
+}

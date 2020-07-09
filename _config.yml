@@ -1,54 +1,29 @@
-name: docs-theme
-title: Docs Theme
-source: ./src
-destination: ./_site
-encoding: UTF-8
+# Welcome to Jekyll!
+#
+# This config file is meant for settings that affect your whole blog, values
+# which you are expected to set up once and rarely need to edit after that.
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'jekyll serve'. If you change this file, please restart the server process.
 
-ENV: development
+# Site settings
+title: Portfolio
+email: sean.e.halpin@gmail.com
+description: > # this means to ignore newlines until "baseurl:"
+  Portfolio
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "https://seanehalpin.github.io/sean-2020" # the base hostname & protocol for your site
+twitter_username: seanehalpin
+github_username:  seanehalpin
+info-button: Info
+meta: "/assets/meta.png"
 
-url: ""
-baseurl:  ""
-
-# Prototype data
-company:
-  name: Help Scout
-
-
-# Permalinks
-permalink: pretty
-
+# Build settings
 markdown: kramdown
-highlighter: rouge
+exclude: ["README.md", "package.json", "gulpfile.js", "node_modules/"]
 
-kramdown:
-  input: GFM
-  hard_wrap: false
-  syntax_highlighter: rouge
-  syntax_highlighter_opts:
-    span:
-      line_numbers: false
-    block:
-      line_numbers: false
-      start_line: 1
+plugins_dir: ./_plugins
 
-exclude:
-  - _site
-  - .asset-cache
-  - .cache
-  - .gitignore
-  - _assets/vendor
-  - framework/archived
-  - js
-  - node_modules
-  - prod-config
-  - scss
-  - site
-  - tmp
-  - "*.xml"
-
-keep_files:
-  - css
-  - fonts
-  # - images
-  - js
-  - "*.xml"
+jekyll_get:
+  - data: github
+    json: 'https://api.github.com/users/seanehalpin/repos'
+    cache: false

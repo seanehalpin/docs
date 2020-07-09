@@ -1,0 +1,31 @@
+// utils :: colors
+
+$colors: (
+  blue: (
+    200: #E2E8FF,
+    300: #ABBBFF,
+    400: #0927AA,
+    500: #001D9B
+  ),
+  yellow: (
+    400: #FFFBE2,
+    500: #FAE881
+  ),
+  pink: (
+    400: #FFF0F9,
+    500: #FF98D3
+  ),
+  turquoise: (
+    400: #EEFEFF,
+    500: #49CED5
+  ),
+  slate: (
+    400: #B4BFCA,
+    600: #4e5675
+  ),
+  white: (
+    white: #ffffff
+  )
+);
+
+@include _color($colors);

@@ -1,9 +1,0 @@
-url: "http://developer.helpscout.net"
-baseurl: "/hs-prototype"
-
-ENV: production
-
-assets:
-  compress:
-    css: true
-  digest: true
