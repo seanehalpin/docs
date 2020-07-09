@@ -9,7 +9,7 @@
 title: Docs
 email: sean.e.halpin@gmail.com
 description: > # this means to ignore newlines until "baseurl:"
-  Portfolio
+  Docs
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://seanehalpin.github.io/docs" # the base hostname & protocol for your site
 twitter_username: seanehalpin

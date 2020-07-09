@@ -31,7 +31,7 @@ switch (env) {
   case 'PROD':
     buildVars.minify = true;
     buildVars.sourceMaps = false;
-    buildVars.url = 'https://seanehalpin.github.io/helpy/'; // Add your production url here
+    buildVars.url = 'https://seanehalpin.github.io/docs/'; // Add your production url here
     break;
 }
 
