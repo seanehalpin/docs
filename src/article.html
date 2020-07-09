@@ -13,9 +13,7 @@ admin: false
 <main role="main">
   <div class="th-section">
     <div class="o-container">
-      {% if page.admin == true %}
-      {% include admin.html %}
-      {% endif %}
+
       <div class="o-row">
         <div class="o-col-12 o-col-10@sm o-col-offset-1@sm">
           <article class="th-article-list th-article">
@@ -47,13 +45,11 @@ admin: false
                 <li>Adjust the User count, then click the Make an Annual Payment button. If you're paying via check or PayPal, contact us and we'll send you an invoice to finish the payment process. Read all about annual subscriptions here.</li>
               </ol>
             </section>
-            {% include article-footer.html %}
+
           </article>
         </div>
       </div>
     </div>
   </div>
-  {% if page.related-articles == true %}
-  {% include related-articles.html %}
-  {% endif %}
+
 </main>
